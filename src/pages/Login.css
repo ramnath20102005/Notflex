@@ -1,0 +1,144 @@
+.login-bg {
+  min-height: 100vh;
+  background: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.netflix-bg::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('https://assets.nflxext.com/ffe/siteui/vlv3/7e7e7e7e-7e7e-7e7e-7e7e-7e7e7e7e7e7e/7e7e7e7e-7e7e-7e7e-7e7e-7e7e7e7e7e7e_BG.jpg') center center/cover no-repeat;
+  filter: brightness(0.4);
+  z-index: 0;
+}
+
+.netflix-card {
+  background: rgba(0,0,0,0.75);
+  padding: 3rem 2.5rem 2.5rem 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.9);
+  width: 100%;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.login-logo {
+  width: 100px;
+  margin-bottom: 1.5rem;
+}
+
+.login-title {
+  color: #fff;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+}
+
+.login-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-input {
+  width: 100%;
+  padding: 0.9em 1em;
+  margin-bottom: 1.2em;
+  border: none;
+  border-radius: 4px;
+  background: #333;
+  color: #fff;
+  font-size: 1em;
+  outline: none;
+}
+
+.login-input:focus {
+  background: #444;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 0.9em 1em;
+  background: #e50914;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1em;
+  font-weight: 700;
+  margin-bottom: 1.2em;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.login-btn:hover {
+  background: #f40612;
+}
+
+.login-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1.2em;
+}
+
+.remember-me {
+  color: #b3b3b3;
+  font-size: 0.95em;
+  display: flex;
+  align-items: center;
+}
+
+.need-help {
+  color: #b3b3b3;
+  font-size: 0.95em;
+  text-decoration: none;
+}
+.need-help:hover {
+  text-decoration: underline;
+}
+
+.login-signup-text {
+  color: #b3b3b3;
+  font-size: 1em;
+  margin-top: 0.5em;
+}
+
+.login-signup-text a {
+  color: #fff;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.login-footer {
+  margin-top: 2em;
+  width: 100%;
+  text-align: left;
+}
+
+.login-footer-text {
+  color: #8c8c8c;
+  font-size: 0.95em;
+}
+
+@media (max-width: 500px) {
+  .login-card, .netflix-card {
+    padding: 2rem 1rem 1.5rem 1rem;
+    max-width: 95vw;
+  }
+  .login-logo {
+    width: 70px;
+  }
+} 

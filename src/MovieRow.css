@@ -1,0 +1,42 @@
+.row {
+  color: #fff;
+  margin-left: 2rem;
+  margin-top: 2rem;
+}
+
+.row__title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.row__posters {
+  display: flex;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  gap: 0.7rem;
+}
+
+.row__poster {
+  width: 150px;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+  transition: transform 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  cursor: pointer;
+}
+
+.row__poster:hover {
+  transform: scale(1.08);
+  box-shadow: 0 4px 16px rgba(229,9,20,0.4);
+}
+
+@media (max-width: 600px) {
+  .row__poster {
+    width: 100px;
+  }
+  .row {
+    margin-left: 1rem;
+  }
+} 
