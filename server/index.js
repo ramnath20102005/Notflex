@@ -1,7 +1,6 @@
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
-const path = require('path');
 
 const app = express();
 app.use(cors());
@@ -19,14 +18,6 @@ mongoose.connect(MONGO_URI).then(() => {
 }).catch((err) => {
     console.error("MongoDB connection error:", err);
 });
-
-// Serve static files from the frontend (if built and placed in /public)
-if (process.env.NODE_ENV === 'production') {
-    app.use(express.static(path.join(__dirname, '../public')));
-    app.get('*', (req, res) => {
-        res.sendFile(path.join(__dirname, '../public', 'index.html'));
-    });
-}
 
 const PORT = process.env.PORT || 5000;
 
